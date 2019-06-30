@@ -12,8 +12,23 @@ public class TransactionController {
     @Autowired
     TransactionService transactionService;
 
+    @Autowired
+    TransactionServiceWithEvents transactionServiceWithEvents;
+
+    @Autowired
+    EmployeeRepository employeeRepository;
+
     @GetMapping
     public void testTrans(){
         transactionService.methodOne();
+    }
+
+    @GetMapping("testEvents")
+    public Employee testTransWithEvents(){
+        final Employee employee = transactionServiceWithEvents.createEmployee("vinod", "vin@m.com");
+
+        final Employee persistedEmployee = employeeRepository.getOne(employee.getId());
+
+        return persistedEmployee;
     }
 }

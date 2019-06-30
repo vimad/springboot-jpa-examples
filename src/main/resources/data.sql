@@ -24,7 +24,7 @@ INSERT INTO resource (resource_id, resource_type, hierarchy_hierarchy_id, reserv
 INSERT INTO resource (resource_id, resource_type, hierarchy_hierarchy_id, reservation_id) VALUES (4L, 'OPERATING_ROOM', 3L, 4L);
 
 -- ************************************************
--- Common Entity
+-- Common Entity db
 insert into course(id, name, created_date, last_updated_date,is_deleted) values(10001,'Maths', sysdate(), sysdate(),false);
 insert into course(id, name, created_date, last_updated_date,is_deleted) values(10002,'Physics', sysdate(), sysdate(),false);
 insert into course(id, name, created_date, last_updated_date,is_deleted) values(10003,'Chemistry', sysdate(), sysdate(),false);

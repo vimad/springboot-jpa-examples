@@ -26,7 +26,6 @@ public class Course {
     private static Logger LOGGER = LoggerFactory.getLogger(Course.class);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
